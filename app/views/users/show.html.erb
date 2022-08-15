@@ -1,0 +1,16 @@
+<div class="container">
+  
+  <p style="color: green"><%= notice %></p>
+  
+  <%= render @user %>
+  
+  <div>
+    <%= link_to "Editar usuario", edit_user_path(@user), class: "btn btn-info" %> |
+    <%= link_to "Volver a usuarios", users_path, class: "btn btn-info" %>
+  
+    <%= button_to "Eliminar usuario", @user, method: :delete, class: "btn btn-danger" %>
+  </div>
+
+
+</div>
+

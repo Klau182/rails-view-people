@@ -1,0 +1,22 @@
+<div class="container">
+  <p style="color: rgb(9, 192, 9)"><%= notice %></p>
+  <h1 class="text-center">Users</h1>
+  <div id="users">
+    <%# @users.each do |user| %> <%#= render user %>
+    <p><%#= link_to "Show this user", user, class: "btn btn-warning" %></p>
+    <%# end %>
+  </div>
+</div>
+<%= link_to "New user", new_user_path, class: "btn btn-success" %>
+<div class="container">
+  <div class="card" style="width: 18rem">
+    <% @users.each do |user| %>
+    <div class="card-body">
+      <%= image_tag("incognita.jpeg", :alt => "incognita") %>
+      <h5 class="card-title">Nombre: <%= user.name %> <%= user.last_name %></h5>
+      <p class="card-text">Edad: <%= user.age %></p>
+      <%= link_to "Mostrar usuario", user, class: "btn btn-warning" %>
+    </div>
+    <% end %>
+  </div>
+</div>
